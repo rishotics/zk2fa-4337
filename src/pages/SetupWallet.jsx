@@ -1,7 +1,16 @@
 import React from 'react';
 import qrImg from "../assets/image/qr.png"
+import { generateMerkleTree } from "./util";
 
-const SetupWallet = () => {
+const SetupWallet = async () => {
+
+  const deploy = async() => {
+    let [_uri, _secret, root] = await generateMerkleTree();
+
+    
+  }
+
+  
   return (
     <div className="d-flex row justify-content-center m-4">
       <h3>Wallet Setup</h3>
