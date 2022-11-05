@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import Cross from '../assets/image/Cross.png'
+const Cross = require('../assets/image/Cross.png');
 
 const UnSuccessful = () => {
   return (

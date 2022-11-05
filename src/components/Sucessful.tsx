@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import Tick from '../assets/image/Tick.png'
+const Tick = require('../assets/image/Tick.png') ;
 
 const Sucessful = () => {
     return (

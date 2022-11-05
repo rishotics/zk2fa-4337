@@ -1,5 +1,5 @@
 import React from 'react';
-import qrImg from "../assets/image/qr.png"
+const qrImg = require("../assets/image/qr.png");
 
 const SetupWallet = () => {
   return (

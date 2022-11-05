@@ -2,6 +2,10 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+type Class = {
+    display: string;
+};
+
 const TryItOut = () => {
     return (
         <div className="d-flex row justify-content-center m-4">
@@ -13,7 +17,7 @@ const TryItOut = () => {
                 <div className='m-4 p-4 rounded' style={{ backgroundColor: "#F0F0F0", width: "40%" }}>
                     <Form>
                         <Form.Group style={{ display: "flex", justifyContent: "stretch" }} className="mb-3" controlId="formBasicEmail">
-                            <div class={{ display: "flex" }}>
+                            <div>
                                 <div style={{ width: "14em", justifyContent: "center" }}>
                                     <Form.Label style={{}}>Email address :</Form.Label>
                                 </div>
@@ -22,7 +26,7 @@ const TryItOut = () => {
                         </Form.Group>
 
                         <Form.Group style={{ display: "flex" }} className="mb-3" controlId="formBasicPassword">
-                            <div class={{ display: "flex" }}>
+                            <div>
                                 <div style={{ width: "14em", justifyContent: "center" }}>
                                     <Form.Label style={{}}>Password :</Form.Label>
                                 </div>

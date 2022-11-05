@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 
 class Otpinput extends React.Component {
 
-  constructor(props) {
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = { value: '', otp1: "", otp2: "", otp3: "", otp4: "", otp5: "", disable: true };
     this.handleChange = this.handleChange.bind(this);
@@ -11,32 +11,32 @@ class Otpinput extends React.Component {
 
   }
 
-  handleChange(value1, event) {
+  handleChange(value1: string, event: React.ChangeEvent<HTMLInputElement>) {
 
     this.setState({ [value1]: event.target.value });
   }
 
-  handleSubmit(event) {
+  handleSubmit(event: { target: HTMLFormElement | undefined; preventDefault: () => void; }) {
 
     const data = new FormData(event.target);
     console.log(this.state);
     event.preventDefault();
   }
 
-  inputfocus = (elmnt) => {
+  inputfocus = (elmnt: React.KeyboardEvent<HTMLInputElement>) => {
     if (elmnt.key === "Delete" || elmnt.key === "Backspace") {
-      const next = elmnt.target.tabIndex - 2;
+      const next = (elmnt.target as HTMLInputElement).tabIndex - 2;
       if (next > -1) {
 
-        elmnt.target.form.elements[next].focus()
+        (elmnt.target as HTMLFormElement).form.elements[next].focus()
       }
     }
     else {
       console.log("next");
      
-        const next = elmnt.target.tabIndex;
+        const next = (elmnt.target as HTMLInputElement).tabIndex;
         if (next < 5) {
-          elmnt.target.form.elements[next].focus()
+          (elmnt.target as HTMLFormElement).form.elements[next].focus()
         }
     }
 

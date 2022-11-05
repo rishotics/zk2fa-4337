@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from '../pages/Home';
-import SetupWallet from '../pages/SetupWallet.jsx';
+import SetupWallet from '../pages/SetupWallet';
 import TryItOut from '../pages/TryItOut';
 import GoogleAuth from '../pages/GoogleAuth';
 import GoogleAuthSuccess from '../pages/GoogleAuthSuccess'
